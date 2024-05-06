@@ -154,8 +154,6 @@ function tiempoEspera(){
         setTimeout(unSegundo, 2000)
         setTimeout(ceroSegundos,3000);
         setTimeout(obtenerValores, 4000);
-        /*setTimeout(imagenesP1, 4002);
-        setTimeout(imagenesP2, 4002);*/
         setTimeout(Espera, 4001);
         setTimeout(compararJugadas_1, 4000);
 }
@@ -171,10 +169,6 @@ function siguienteRonda(){
     numronda+=1;
     document.querySelector('#NumRonda').textContent = 'Ronda '+numronda;
 }
-/*
-function Detener(){
-    clearInterval(ronda);
-}*/
 
 function tresSegundos(){
     document.querySelector('#SigRonda').textContent = `Siguiente ronda en 3`
@@ -197,6 +191,7 @@ function Espera(){
     document.querySelector('#SigRonda').textContent = `Espera...`
     imagenesP1();
     imagenesP2(jugadaP2);
+    
 }
 
 function definirGanador(){
@@ -239,4 +234,9 @@ function imagenesP2(){
     }else{
         imgP2.src="./img/void.png"
     }
+}
+
+function refrescarPagina(){
+    window.location.reload()
+    window.scrollTo(0, 0)
 }
